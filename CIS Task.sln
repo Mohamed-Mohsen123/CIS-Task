@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36616.10 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CIS Task", "CIS Task\CIS Task.csproj", "{A3586A64-AB1D-413A-ADE4-069999D9A1BB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A3586A64-AB1D-413A-ADE4-069999D9A1BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3586A64-AB1D-413A-ADE4-069999D9A1BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3586A64-AB1D-413A-ADE4-069999D9A1BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3586A64-AB1D-413A-ADE4-069999D9A1BB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9EA29E86-2514-4EEC-993D-62717217F64B}
+	EndGlobalSection
+EndGlobal
