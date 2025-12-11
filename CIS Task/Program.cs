@@ -4,56 +4,31 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(CountMelts("_I___I___I__I"));
-     
-        }
+            //it counts _ until it raeches the I if there is no I it compares the count 
+            // if (count<3) count=0; else I becomes _ count++ continue;
 
-        static int CountMelts(string s)
+            int melts = CountMelts("___I_I");
+            Console.WriteLine("melts : " + melts);
+        }
+        static int CountMelts(string input)
         {
-            int total = 0;
-
-            while (true)
+            int segmantCount = 0;
+            int meltCount = 0;
+            foreach (char c in input)
             {
-                char[] arr = s.ToCharArray();
-                Stack<char> stack = new Stack<char>();
-                int meltIndex = -1;
-
-                for (int i = 0; i < arr.Length; i++)
+                if (c == 'I' && segmantCount < 3)
                 {
-                    if (arr[i] == '_')
-                    {
-                        stack.Push('_');
-
-                        // keep ONLY last 3 underscores
-                        if (stack.Count > 3)
-                            stack.Pop();
-
-                        if (stack.Count == 3)
-                        {
-                            int next = i + 1;
-                            if (next < arr.Length && arr[next] == 'I')
-                            {
-                                meltIndex = next;
-                                break;
-                            }
-                        }
-                    }
-                    else
-                    {
-                        stack.Clear();
-                    }
+                    segmantCount = 0;
                 }
-
-                if (meltIndex == -1) break;
-
-                arr[meltIndex] = '_';
-                total++;
-                s = new string(arr);
+                else if (c == 'I')
+                {
+                    meltCount++;
+                    segmantCount++;
+                }
+                else segmantCount++;
             }
-
-            return total;
+            return meltCount;
         }
-
 
     }
 }
