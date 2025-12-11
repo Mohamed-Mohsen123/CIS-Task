@@ -16,14 +16,15 @@
             int meltCount = 0;
             foreach (char c in input)
             {
-                if (c == 'I' && segmantCount < 3)
+
+                if (c == 'I')
                 {
-                    segmantCount = 0;
-                }
-                else if (c == 'I')
-                {
-                    meltCount++;
-                    segmantCount++;
+                    if (segmantCount < 3) segmantCount = 0;
+                    else
+                    {
+                        meltCount++;
+                        segmantCount++;
+                    }
                 }
                 else segmantCount++;
             }
